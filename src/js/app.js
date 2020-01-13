@@ -22,8 +22,8 @@ const purchases = [
 ];
 let cashback = 0;
 
-for (let i = 0; i < purchases.length; i++) {
-    const elem = purchases[i];
+for (const purchase of purchases) {
+    elem = purchase;
     switch (elem.category) {
         case REGULAR_CATEGORY:
             cashback += (1 * elem.amount) / 100
