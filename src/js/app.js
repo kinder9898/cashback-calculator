@@ -2,6 +2,11 @@ const REGULAR_CATEGORY = 'regular';
 const INCREASED_CATEGORY = 'increased';
 const SPECIAL_CATEGORY = 'special';
 
+const regularPercent = 0.01;
+const increasedPercent = 0.05;
+const specialPercent = 0.3;
+
+
 const purchases = [
     {
         amount: 1000,
@@ -26,13 +31,13 @@ for (const purchase of purchases) {
     elem = purchase;
     switch (elem.category) {
         case REGULAR_CATEGORY:
-            cashback += (1 * elem.amount) / 100
+            cashback += regularPercent * elem.amount
             break;
         case INCREASED_CATEGORY:
-            cashback += (5 * elem.amount) / 100
+            cashback += increasedPercent * elem.amount 
             break;
         case SPECIAL_CATEGORY:
-            cashback += (30 * elem.amount) / 100
+            cashback += specialPercent * elem.amount
         default:
             break;
 
