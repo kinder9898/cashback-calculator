@@ -39,6 +39,8 @@ for (let i = 0; i < purchases.length; i++) {
     }
 }
 const cashbackLimit=3000;
-if (cashback > cashbackLimit)
+if (cashback > cashbackLimit){
     cashback = cashbackLimit;
+}
+    
 console.log(cashback);
