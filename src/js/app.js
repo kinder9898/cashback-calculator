@@ -28,16 +28,15 @@ const purchases = [
 let cashback = 0;
 
 for (const purchase of purchases) {
-    elem = purchase;
-    switch (elem.category) {
+    switch (purchase.category) {
         case REGULAR_CATEGORY:
-            cashback += regularPercent * elem.amount
+            cashback += regularPercent * purchase.amount
             break;
         case INCREASED_CATEGORY:
-            cashback += increasedPercent * elem.amount 
+            cashback += increasedPercent * purchase.amount 
             break;
         case SPECIAL_CATEGORY:
-            cashback += specialPercent * elem.amount
+            cashback += specialPercent * purchase.amount
         default:
             break;
 
